@@ -1,0 +1,49 @@
+#include<stdio.h>
+#include<stdlib.h>
+struct node
+{ int data;
+  struct node*next;
+};
+struct node *head;
+void endinsertion();
+void main()
+{
+    endinsertion();
+}
+void endinsertion()
+{
+    struct node *ptr,*temp;
+    int value;
+    ptr=(struct node*)malloc(sizeof(struct node));
+    temp=head;
+    printf("enter your data");
+    scanf("%d",&ptr->data);
+    if(ptr==NULL)
+    {
+        printf("over flow");
+    }
+    else 
+    {
+        ptr->data=value;
+        if(head==NULL)
+        { 
+        
+        ptr->next=NULL;
+        head=ptr;
+          printf("inserted at the end");
+        }
+       else
+        {
+        while(temp->next!=NULL)
+        {
+            temp=temp->next;
+        }
+        temp->next=ptr;
+        
+        ptr->next=NULL;
+        printf("inserted at the end");
+        }    
+    }      
+    
+        
+}        
